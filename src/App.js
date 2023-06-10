@@ -1,7 +1,12 @@
 import React from "react";
+import Home from "./components/Home";
+
+import "./styles/normalize.css";
+import "./styles/fontawesome.min.css";
+import "./styles/main.css";
 
 function App() {
-  return <div>Project</div>;
+  return <Home />;
 }
 
 export default App;
