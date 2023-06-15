@@ -3,10 +3,10 @@
 import React from "react";
 import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 
-import Home from "./components/Home";
-import Users from "./components/Users";
-import UserBlog from "./components/UserBlog";
-import UserPostForm from "./components/UserPostForm";
+import Home from "./components/pages/Home";
+import Users from "./components/pages/Users";
+import UserBlog from "./components/pages/UserBlog";
+import UserPostForm from "./components/pages/UserPostForm";
 
 import "./styles/normalize.css";
 import "./styles/fontawesome.min.css";
