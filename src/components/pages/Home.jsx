@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import Loading from "../atoms/Loading";
 
+import { CurUserContext } from "../contexts/CurUserContext";
+
 export default function Home() {
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
-  const [curUser, setCurUser] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  const { curUser, setCurUser } = useContext(CurUserContext);
 
   useEffect(() => {
     fetch("https://63cf09718a780ae6e6710dbe.mockapi.io/users")
