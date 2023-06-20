@@ -33,9 +33,6 @@ export default function UserBlog() {
     getApiData();
   }, [userId]);
 
-  console.log("user", user);
-  console.log("posts", posts);
-
   return isLoading ? (
     <Loading />
   ) : (

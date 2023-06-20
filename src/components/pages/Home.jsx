@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../../images/logo.svg";
 import Loading from "../atoms/Loading";
+import styles from "./Home.module.css";
 
 import { CurUserContext } from "../contexts/CurUserContext";
 
@@ -23,14 +24,15 @@ export default function Home() {
   return isLoading ? (
     <Loading />
   ) : (
-    <div className="home center">
-      <div className="home__logo">
+    <div className={`${styles.home} center`}>
+      <div className={styles.logo}>
         <img src={logo} className="responsive" alt="" />
       </div>
 
       <select
         onChange={(e) => setCurUser(e.target.value)}
-        className="home__select-users"
+        className={styles.selectUsers}
+        defaultValue={curUser}
       >
         <option value="">Select the user</option>
         {users
